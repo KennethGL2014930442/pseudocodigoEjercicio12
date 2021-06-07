@@ -1,0 +1,43 @@
+Algoritmo Ejercicio12
+	contadorfemenino <- 0
+	contadormasculino <- 0
+	acumuladorfemenino <- 0
+	acumuladormasculino <- 0
+	acumuladoredad <- 0
+	contadoredad <- 0
+	edad <- 0
+	altura <- 0
+	Escribir 'Ingrese la edad: '
+	Leer edad
+	Escribir 'Ingrese la altura en centimetros: '
+	Leer altura
+	Escribir 'Ingrese el sexo (M/F): '
+	Leer sexo
+	sexo <- 'M'
+	sexo <- 'F'
+	Mientras altura>0 Hacer
+		Si (sexo='M') Entonces
+			contadormasculino <- contadormasculino+1
+			acumuladormasculino <- acumuladormasculino+altura
+		SiNo
+			Si (sexo='F') Entonces
+				contadorfemenino <- contadorfemenino+1
+				acumuladorfemenino <- acumuladorfemenino+altura
+			FinSi
+		FinSi
+		contadoredad <- contadoredad+1
+		acumuladoredad <- acumuladoredad+edad
+		Escribir 'Ingrese edad siguiente persona: '
+		Leer edad
+		Escribir 'Ingrese altura siguiente persona: '
+		Leer altura
+		Escribir 'Ingrese sexo siguiente personas (M/F): '
+		Leer sexo
+	FinMientras
+	promediomujeres <- acumuladorfemenino/contadorfemenino
+	promediohombres <- acumuladormasculino/contadormasculino
+	promedioedades <- acumuladoredad/contadoredad
+	Escribir 'El promedio de la altura de las mujeres es: ',promediomujeres
+	Escribir 'El promedio de la altura de las hombres es: ',promediohombres
+	Escribir 'El promedio de la edad de los partcipantes es: ',promedioedades
+FinAlgoritmo
